@@ -1,0 +1,24 @@
+===========================================
+PERFIL DE ESTUDIANTE - GIT ESSENTIALS
+===========================================
+
+📅 Fecha de creación: 21/10/2025
+👤 Nombre: ELIEL ALFREDO MEJIA VILLA
+📚 Semestre: 5
+📖 Materia favorita: No tengo
+🍕 Comida favorita: Carne
+
+===========================================
+CURSO: Git Essentials
+👨‍🏫 INSTRUCTOR: Luis Flores
+⏱️ DURACIÓN: 3 horas
+===========================================
+
+📝 NOTAS PERSONALES:
+- Este archivo fue generado como parte de la actividad práctica
+- Recuerda hacer commit de este archivo a tu repositorio
+- ¡Disfruta aprendiendo Git! 🚀
+
+===========================================
+¡Gracias por participar en Git Essentials!
+===========================================
