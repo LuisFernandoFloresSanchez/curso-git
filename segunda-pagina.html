@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Segunda Página - Curso Git</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <h1>¡Bienvenido a la segunda página!</h1>
+    <p>Esta es la segunda página de nuestro sitio web del curso de Git.</p>
+    <p>Aquí puedes encontrar más contenido sobre el curso:</p>
+    
+    <div class="course-info">
+        <ul>
+            <li><a href="informacion-curso.html" style="color: #007bff; text-decoration: none;">📚 Información detallada del curso</a></li>
+            <li><a href="lector-perfiles.html" style="color: #007bff; text-decoration: none;">📖 Lector de perfiles de estudiantes</a></li>
+            <li><a href="https://www.canva.com/design/DAG2FivSZEg/6a_cG2R03XGSODmDHKTiWQ/edit?utm_content=DAG2FivSZEg&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton" target="_blank" style="color: #007bff; text-decoration: none;">🔗 Enlaces útiles y recursos</a></li>
+            <li><a href="https://thewolveslabs.com" target="_blank" style="color: #007bff; text-decoration: none;">🐺 The Wolves Labs</a></li>
+            <li><a href="https://docs.google.com/forms/d/e/1FAIpQLScZghZs69FLCai4DxnLV9hG3YOrk7_DXImD9Npv8SQNTtzmHA/viewform?usp=header" target="_blank" style="color: #007bff; text-decoration: none;">💬 Testimonios de estudiantes</a></li>
+        </ul>
+    </div>
+
+    <!-- Sección interactiva para estudiantes -->
+    <div class="interactive-section">
+        <h2>🎓 Actividad Práctica - Crea tu Perfil de Estudiante</h2>
+        <p>Como parte del curso Git Essentials, completa este formulario para crear tu archivo personal que agregarás al repositorio usando el flujo de trabajo con ramas:</p>
+        
+        <form id="studentForm" class="student-form">
+            <div class="form-group">
+                <label for="nombre">👤 Nombre completo:</label>
+                <input type="text" id="nombre" name="nombre" required>
+            </div>
+
+            <div class="form-group">
+                <label for="semestre">📚 Semestre actual:</label>
+                <select id="semestre" name="semestre" required>
+                    <option value="">Selecciona tu semestre</option>
+                    <option value="1">Primer semestre</option>
+                    <option value="2">Segundo semestre</option>
+                    <option value="3">Tercer semestre</option>
+                    <option value="4">Cuarto semestre</option>
+                    <option value="5">Quinto semestre</option>
+                    <option value="6">Sexto semestre</option>
+                    <option value="7">Séptimo semestre</option>
+                    <option value="8">Octavo semestre</option>
+                    <option value="9">Noveno semestre</option>
+                    <option value="10">Décimo semestre</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="materia">📖 Materia favorita:</label>
+                <input type="text" id="materia" name="materia" placeholder="Ej: Programación, Matemáticas, Base de Datos..." required>
+            </div>
+
+            <div class="form-group">
+                <label for="comida">🍕 Comida favorita:</label>
+                <input type="text" id="comida" name="comida" placeholder="Ej: Pizza, Tacos, Sushi..." required>
+            </div>
+
+            <button type="submit" class="nav-button generate-btn">
+                📄 Generar mi archivo de perfil
+            </button>
+        </form>
+
+        <div id="result" class="result-section" style="display: none;">
+            <h3>✅ ¡Archivo generado exitosamente!</h3>
+            <p>Tu archivo de perfil ha sido creado. Ahora sigue el flujo de trabajo con ramas:</p>
+            
+            <button id="downloadBtn" class="nav-button secondary">
+                💾 Descargar archivo
+            </button>
+            
+            <div class="file-preview">
+                <h4>Vista previa del archivo:</h4>
+                <pre id="fileContent"></pre>
+            </div>
+        </div>
+
+        <div class="git-instructions">
+            <h3>🌿 Flujo de Trabajo con Ramas - Instrucciones Paso a Paso</h3>
+            
+            <div class="step-section">
+                <h4>📋 Paso 1: Crear y cambiar a tu rama personal</h4>
+                <div class="code-block">
+                    <code>git checkout -b perfil/tu-nombre</code>
+                </div>
+                <p class="step-note">💡 Reemplaza "tu-nombre" con tu nombre real (sin espacios). Ejemplo: <code>perfil/luis-flores</code></p>
+            </div>
+
+            <div class="step-section">
+                <h4>📋 Paso 2: Agregar tu archivo al repositorio</h4>
+                <div class="code-block">
+                    <code>git add tu_nombre_perfil.txt</code>
+                </div>
+                <p class="step-note">💡 Asegúrate de que el archivo esté en la carpeta raíz del repositorio</p>
+            </div>
+
+            <div class="step-section">
+                <h4>📋 Paso 3: Hacer commit de tus cambios</h4>
+                <div class="code-block">
+                    <code>git commit -m "Agregar perfil de estudiante: [tu nombre]"</code>
+                </div>
+                <p class="step-note">💡 Usa un mensaje descriptivo para tu commit</p>
+            </div>
+
+            <div class="step-section">
+                <h4>📋 Paso 4: Subir tu rama al repositorio remoto</h4>
+                <div class="code-block">
+                    <code>git push origin perfil/tu-nombre</code>
+                </div>
+                <p class="step-note">🚀 Esto creará tu rama en GitHub y subirá tus cambios</p>
+            </div>
+
+            <div class="step-section">
+                <h4>📋 Paso 5: Crear Pull Request en GitHub</h4>
+                <ol class="pr-steps">
+                    <li>Ve a la página del repositorio en GitHub</li>
+                    <li>Verás un botón <strong>"Compare & pull request"</strong> - haz clic en él</li>
+                    <li>Agrega un título descriptivo: <strong>"Agregar perfil de [tu nombre]"</strong></li>
+                    <li>En la descripción, menciona:
+                        <ul>
+                            <li>Tu nombre y semestre</li>
+                            <li>Que completaste la actividad del curso</li>
+                        </ul>
+                    </li>
+                    <li>Haz clic en <strong>"Create pull request"</strong></li>
+                </ol>
+                <p class="step-note">🎯 El instructor revisará tu Pull Request y lo aprobará para hacer merge a la rama principal</p>
+            </div>
+
+            <div class="important-note">
+                <h4>⚠️ Importante:</h4>
+                <ul>
+                    <li><strong>NO hagas push directamente a main/master</strong></li>
+                    <li>Siempre trabaja en tu rama personal</li>
+                    <li>Espera la aprobación del Pull Request</li>
+                    <li>Esto simula el flujo de trabajo real en equipos de desarrollo</li>
+                </ul>
+            </div>
+
+            <div class="workflow-summary">
+                <h4>📊 Resumen del flujo de trabajo:</h4>
+                <div class="workflow-steps">
+                    <span class="workflow-step">🌿 Crear rama</span>
+                    <span class="workflow-arrow">→</span>
+                    <span class="workflow-step">📝 Hacer cambios</span>
+                    <span class="workflow-arrow">→</span>
+                    <span class="workflow-step">💾 Commit</span>
+                    <span class="workflow-arrow">→</span>
+                    <span class="workflow-step">🚀 Push rama</span>
+                    <span class="workflow-arrow">→</span>
+                    <span class="workflow-step">🔄 Pull Request</span>
+                    <span class="workflow-arrow">→</span>
+                    <span class="workflow-step">✅ Merge</span>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="navigation">
+        <button class="nav-button secondary" onclick="window.location.href='index.html'">
+            🏠 Volver al inicio
+        </button>
+        <button class="nav-button" onclick="window.location.href='informacion-curso.html'">
+            📚 Ver información del curso
+        </button>
+        <button class="nav-button" onclick="window.location.href='lector-perfiles.html'">
+            📖 Leer perfiles de estudiantes
+        </button>
+    </div>
+
+    <script src="student-profile.js"></script>
+</body>
+</html>
